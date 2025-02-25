@@ -1,0 +1,5 @@
+Numeric Data File "testCaseIn3.txt" Analysis
+Number of integers: 2
+The sum of all integers in file: 0
+The largest integer in the set: 0
+The smallest integer in the set: 0

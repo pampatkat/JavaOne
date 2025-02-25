@@ -1,0 +1,496 @@
+
+----Tests for RightTriangle --------------------------------------------------------
+
+____Test 01____________________________________________________________________________
+
+Input:
+-5.0
+3
+4
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 01 - first value negative                                    FAILED    
+
+____Test 02____________________________________________________________________________
+
+Input:
+5.0
+-33.3
+4
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 02 - second value negative                                   FAILED    
+
+____Test 03____________________________________________________________________________
+
+Input:
+5.0
+3.0
+-4.0
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 03 - third value negative                                    FAILED    
+
+____Test 04____________________________________________________________________________
+
+Input:
+5.0
+3.0
+4.0
+
+Expected output must fit RegEx:
+"(?si).*?RIGHT.*?5\.0\^2 = .*"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 04 - right triangle with sides 5.0, 3.0, 4.0                 FAILED    
+
+____Test 05____________________________________________________________________________
+
+Input:
+3.0
+4.0
+5.0
+
+Expected output must fit RegEx:
+"(?si).*?RIGHT.*?5\.0\^2 = .*"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 05 - right triangle with sides 3.0, 4.0, 5.0                 FAILED    
+
+____Test 06____________________________________________________________________________
+
+Input:
+4.0
+5.0
+3.0
+
+Expected output must fit RegEx:
+"(?si).*?RIGHT.*?5\.0\^2 = .*"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 06 - right triangle with sides 4.0, 5.0, 3.0                 FAILED    
+
+____Test 07____________________________________________________________________________
+
+Input:
+12.0
+9.0
+15.0
+
+Expected output must fit RegEx:
+"(?si).*?RIGHT.*?15\.0\^2 = .*"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 07 - right triangle with sides 12.0, 9.0, 15.0               FAILED    
+
+____Test 08____________________________________________________________________________
+
+Input:
+12.0
+19.0
+15.0
+
+Expected output must fit RegEx:
+"(?si).*?NOT .*"
+
+Actual Output:
+"Enter the size of the first side of the triangle => Enter the size of the second side of the triangle => Enter the size of the third side of the triangle => "
+
+RightTriangle TEST 08 - right triangle with sides 12.0, 9.0, 15.0               FAILED    
+
+++++ 8 Tests of RightTriangle COMPLETE +++++++++++++++++++++++++++
+
+----Tests for BridgeToll520 --------------------------------------------------------
+
+____Test 01____________________________________________________________________________
+
+Input:
+0
+1
+am
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 0:01 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 01 - invalid hours value                                     FAILED    
+
+____Test 02____________________________________________________________________________
+
+Input:
+13
+1
+am
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 13:01 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 02 - invalid hours value                                     FAILED    
+
+____Test 03____________________________________________________________________________
+
+Input:
+1
+-1
+am
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 1:-1 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 03 - invalid minutes value                                   FAILED    
+
+____Test 04____________________________________________________________________________
+
+Input:
+1
+60
+am
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 1:60 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 04 - invalid minutes value                                   FAILED    
+
+____Test 05____________________________________________________________________________
+
+Input:
+1
+60
+Am
+
+Expected output must fit RegEx:
+"(?si).*?ERROR.*?"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 1:60 Am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 05 - invalid am/pm value                                     FAILED    
+
+____Test 06____________________________________________________________________________
+
+Input:
+12
+1
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.25.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 12:01 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 06 - $1.25 charge                                            FAILED    
+
+____Test 07____________________________________________________________________________
+
+Input:
+4
+59
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.25.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 4:59 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 07 - $1.25 charge                                            FAILED    
+
+____Test 08____________________________________________________________________________
+
+Input:
+11
+59
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.25.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 11:59 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 08 - $1.25 charge                                            FAILED    
+
+____Test 09____________________________________________________________________________
+
+Input:
+5
+0
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.40.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 5:00 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 09 - $1.40 charge                                            FAILED    
+
+____Test 10____________________________________________________________________________
+
+Input:
+7
+59
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.40.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 7:59 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 10 - $1.40 charge                                            FAILED    
+
+____Test 11____________________________________________________________________________
+
+Input:
+9
+1
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.40.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 9:01 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 11 - $1.40 charge                                            FAILED    
+
+____Test 12____________________________________________________________________________
+
+Input:
+10
+59
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?1\.40.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 10:59 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 12 - $1.40 charge                                            FAILED    
+
+____Test 13____________________________________________________________________________
+
+Input:
+8
+01
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.05.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 8:01 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 13 - $2.05 charge                                            FAILED    
+
+____Test 14____________________________________________________________________________
+
+Input:
+10
+58
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.05.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 10:58 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 14 - $2.05 charge                                            FAILED    
+
+____Test 15____________________________________________________________________________
+
+Input:
+6
+2
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.05.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 6:02 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 15 - $2.05 charge                                            FAILED    
+
+____Test 16____________________________________________________________________________
+
+Input:
+8
+58
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.05.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 8:58 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 16 - $2.05 charge                                            FAILED    
+
+____Test 17____________________________________________________________________________
+
+Input:
+11
+15
+am
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.65.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 11:15 am
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 17 - $2.65 charge                                            FAILED    
+
+____Test 18____________________________________________________________________________
+
+Input:
+12
+0
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.65.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 12:00 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 18 - $2.65 charge                                            FAILED    
+
+____Test 19____________________________________________________________________________
+
+Input:
+4
+58
+pm
+
+Expected output must fit RegEx:
+"(?si).*?Charge:.*?2\.65.*"
+
+Actual Output:
+"Hours (1-12) => Minutes (0-59) => am or pm (lower case only) => 
+Timestamp: 4:58 pm
+Charge: $-1.00
+"
+
+BridgeToll520 TEST 19 - $2.65 charge                                            FAILED    
+
+++++ 19 Tests of BridgeToll520 COMPLETE +++++++++++++++++++++++++++
+
+----Tests for MathTutor----------------------------------------
+
+Input:
+5
+1
+123
+10
+2
+123
+3
+
+Expected output must fit RegEx:
+"(?si).*?Math Tutor.*?ERROR.*?Math Tutor.*?\+.*?ERROR.*?Math Tutor.*?\-.*?Math Tutor.*"
+
+Actual Output:
+""
+
+MathTutor TEST 01 - partial tests                 FAILED    
+
+++++ 1 Test of MathTutor COMPLETE +++++++++++++++++++++++++++
+
+ATTENTION! MathTutor must be tested manually. Make sure that 
+1)Random numbers are in the correct range. 
+2)Output formatted according to specs - the numbers aligned correctly and a number with more digits appear on top of the one with less digits.
+3)The code is commented thoroughly.

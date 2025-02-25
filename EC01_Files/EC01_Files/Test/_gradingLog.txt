@@ -1,0 +1,17 @@
+
+----pyramidInFile() Tests------------------------------------------------------------
+
+pyramidInFile() TEST 01 - pattern of size 1                                     PASSED    
+pyramidInFile() TEST 02 - pattern of size 2                                     PASSED    
+pyramidInFile() TEST 03 - pattern of size 3                                     PASSED    
+pyramidInFile() TEST 04 - pattern of size 4                                     PASSED    
+pyramidInFile() TEST 05 - pattern of size 5                                     PASSED    
+pyramidInFile() TEST 06 - pattern of size 8                                     PASSED    
+pyramidInFile() TEST 07 - IllegalArgumentException, negative parameter          PASSED    
+pyramidInFile() TEST 08 - IOException                                           PASSED    
+
+----powersOfTwoInFile() Tests------------------------------------------------------------
+
+powersOfTwoInFile() TEST 01 - empty input file                                  PASSED    
+powersOfTwoInFile() TEST 02 - general case, mixed values in file                PASSED    
+powersOfTwoInFile() TEST 03 - IOException                                       PASSED    

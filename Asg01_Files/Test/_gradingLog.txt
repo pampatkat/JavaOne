@@ -1,0 +1,150 @@
+
+----Tests of Swap----------------------------------------
+
+____Test 01_______________________________________________________
+
+Input:
+10
+20
+
+Expected Output:
+"After swapping, the values of the two numbers are 20.0 and 10.0"
+
+Actual Output:
+"After swapping, the values of the two numbers are 20.0 and 10.0"
+
+Swap TEST 01                                      PASSED    
+
+____Test 02_______________________________________________________
+
+Input:
+3
+5
+
+Expected Output:
+"After swapping, the values of the two numbers are 5.0 and 3.0"
+
+Actual Output:
+"After swapping, the values of the two numbers are 5.0 and 3.0"
+
+Swap TEST 02                                      PASSED    
+
+++++ 2 Tests of Swap COMPLETE +++++++++++++++++++++++++++
+
+----Tests for CircleArea----------------------------------------
+
+____Test 01_______________________________________________________
+
+Input:
+10
+
+Expected output must fit RegEx:
+"(?si).*?10.*?314.*"
+
+Actual Output:
+"Enter Circle radius: Radius: 10.00 
+Area: 314.00"
+
+CircleArea TEST 01                                PASSED    
+
+____Test 02_______________________________________________________
+
+Input:
+20
+
+Expected output must fit RegEx:
+"(?si).*?20.*?1256.*"
+
+Actual Output:
+"Enter Circle radius: Radius: 20.00 
+Area: 1256.00"
+
+CircleArea TEST 02                                PASSED    
+
+++++ 2 tests for CircleArea COMPLETE +++++++++++++++++++++++++++
+
+----Tests of RestaurantBill----------------------------------------
+
+____Test 01_______________________________________________________
+
+Input:
+100
+20
+
+Expected output must fit RegEx:
+"(?si).*?100.*?10.*?22.*?132.*"
+
+Actual Output:
+"Enter the bill amount: Enter the tip percentage: 
+The meal cost is: $100.00 
+The tax amount is: $10.00 
+The tip amount is: $22.00 
+The total bill is: $132.00"
+
+RestaurantBill TEST 01                            PASSED    
+
+____Test 02_______________________________________________________
+
+Input:
+107
+15
+
+Expected output must fit RegEx:
+"(?si).*?107.*?10\.7.*?17\.66.*?135\.36.*"
+
+Actual Output:
+"Enter the bill amount: Enter the tip percentage: 
+The meal cost is: $107.00 
+The tax amount is: $10.70 
+The tip amount is: $17.66 
+The total bill is: $135.36"
+
+RestaurantBill TEST 02                            PASSED    
+
+++++ 2 Tests of RestaurantBill COMPLETE +++++++++++++++++++++++++++
+
+----Tests of InterestEarned----------------------------------------
+
+____Test 01_______________________________________________________
+
+Input:
+1000
+4.25
+12
+
+Expected output must fit RegEx:
+"(?si).*?4.25.*?12.*?1000.*?43.34.*?1043.34.*"
+
+Actual Output:
+"Enter the principal balance: Enter the percent interest rate as a percentage value: Enter the times compounded per year: 
+Interest rate: 4.25%
+Times compounded: 12
+Principal: $1000.0
+Interest: $43.34
+Amount in savings: $1043.34
+"
+
+InterestEarned TEST 01                            PASSED    
+
+____Test 02_______________________________________________________
+
+Input:
+1000
+5
+2
+
+Expected output must fit RegEx:
+"(?si).*?5.0.*?2.*?1000.*?50.63.*?1050.63.*"
+
+Actual Output:
+"Enter the principal balance: Enter the percent interest rate as a percentage value: Enter the times compounded per year: 
+Interest rate: 5.00%
+Times compounded: 2
+Principal: $1000.0
+Interest: $50.63
+Amount in savings: $1050.63
+"
+
+InterestEarned TEST 02                            PASSED    
+
+++++ 2 Tests of InterestEarned COMPLETE +++++++++++++++++++++++++++

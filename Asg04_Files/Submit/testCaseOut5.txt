@@ -1,0 +1,5 @@
+Numeric Data File "testCaseIn5.txt" Analysis
+Number of integers: 2
+The sum of all integers in file: -2
+The largest integer in the set: 2147483647
+The smallest integer in the set: 2147483647

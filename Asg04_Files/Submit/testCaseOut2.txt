@@ -1,0 +1,1 @@
+Numeric data file "testCaseIn2.txt" has only one number: 0

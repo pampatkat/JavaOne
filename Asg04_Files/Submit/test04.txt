@@ -1,0 +1,5 @@
+Numeric Data File "testCaseIn4.txt" Analysis
+Number of integers: 4
+The sum of all integers in file: 36
+The largest integer in the set: 33
+The smallest integer in the set: 0
