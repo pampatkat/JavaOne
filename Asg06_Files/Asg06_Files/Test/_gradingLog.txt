@@ -1,0 +1,31 @@
+
+----Tests for isSorted() -------------------------------------------------------
+
+isSorted() TEST 01 -- regular functionality                                     PASSED    
+isSorted() TEST 02: IllegalArgumentException                                    PASSED    
+
+----Tests for allUniqueElements() -------------------------------------------------------
+
+allUniqueElements() TEST 01 - all unque elements                                PASSED    
+allUniqueElements() TEST 02 - not all unique                                    PASSED    
+allUniqueElements() TEST 03 - array of 1 element                                PASSED    
+allUniqueElements() TEST 04 - Empty array                                       PASSED    
+
+----Tests for doubleSquares() -------------------------------------------------------
+
+doubleSquares() TEST 01 - regular array containing squares                      PASSED    
+doubleSquares() TEST 02 - Empty array                                           PASSED    
+
+----Tests for removeInRange() -------------------------------------------------------
+
+removeInRange() TEST 01 - removing several values                               PASSED    
+removeInRange() TEST 02 - removing all values                                   PASSED    
+removeInRange() TEST 03 - remove from empty list                                PASSED    
+removeInRange() TEST 04 - range consists of 1 value [3,3]                       PASSED    
+removeInRange() TEST 05 - IllegalArgumentException                              PASSED    
+
+----Tests for repeat() -------------------------------------------------------------
+
+repeat() TEST 01 - regular repeat                                               PASSED    
+repeat() TEST 02 - repeat(list, 1)                                              PASSED    
+repeat() TEST 03 - IllegalArgumentException                                     PASSED    

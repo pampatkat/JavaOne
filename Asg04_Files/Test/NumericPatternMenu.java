@@ -15,7 +15,7 @@ public class NumericPatternMenu {
         break;
       }else{
         System.out.println("ERROR. Number entered is not an integer.");
-        keyboard.next();
+        // keyboard.next();
       }
     }
     return num;
@@ -47,9 +47,25 @@ public class NumericPatternMenu {
     
   public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
-    int num1 = validateInt("Please enter the first number => ", scanner);
-    int num2 = validateInt("Please enter the second number => ", scanner);      
-    System.out.printf("Thank you! first number is %d, second number is %d.", num1, num2);
+    while(true){
+      System.out.println("Numeric Pattern Display");
+      System.out.println("1. Print Type I pattern (like 12321)");
+      System.out.println("2. Print Type II pattern (like 32123)");
+      System.out.println("3. Quit");
+      int num = validateInt("Enter your choice (1 - 3): \n",scanner);
+      if(num == 3) {
+        System.out.println("Quitting!");
+        return;        
+      }
+      int size = validateInt("Please enter the size of the pattern. The size must be a positive integer: \n",scanner);
+      if(num == 1){
+        System.out.println(numericPattern(size, true));
+        continue;
+      }else if(num == 2){
+        System.out.println(numericPattern(size, false));
+        continue;
+      }
+    }
     scanner.close();
   }
 

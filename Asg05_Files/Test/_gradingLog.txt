@@ -1,0 +1,30 @@
+
+----Point Class TESTS -------------------------------------------------------
+
+Point TEST SET 01: Test for set and get methods                                 PASSED    
+Point TEST SET 01: Test for non-argument constructor                            PASSED    
+Point TEST SET 02: Test for constructor with parameters                         PASSED    
+Point TEST SET 02: Test for move() method                                       PASSED    
+Point TEST SET 02: Test for rotate() method                                     PASSED    
+
+----RightTriangle Class TESTS -------------------------------------------------------
+
+RightTriangle TEST SET 01: setetters and getters                                PASSED    
+RightTriangle TEST SET 01: setLegA and exception it must throw                  PASSED    
+RightTriangle TEST SET 01: setLegB and exception it must throw                  PASSED    
+RightTriangle TEST SET 02: constructor with parameters                          PASSED    
+RightTriangle TEST SET 02: no-argument constructor                              PASSED    
+RightTriangle TEST SET 02: constructor exception non-positive first param       PASSED    
+RightTriangle TEST SET 02: constructor exception non-positive second param      PASSED    
+RightTriangle TEST SET 03: area, hypotenuse, and perimeter calculations         PASSED    
+RightTriangle TEST SET 03: Test for toString()                                  PASSED    
+
+----LongInteger Class TEST SETS -------------------------------------------------------
+
+LongInteger TEST SET 01: constructor                                            PASSED    
+LongInteger TEST SET 01: isEven() and isOdd()                                   PASSED    
+LongInteger TEST SET 01: isPrime()                                              PASSED    
+LongInteger TEST SET 02: static isEven() and static isOdd()                     PASSED    
+LongInteger TEST SET 02: static isPrime()                                       PASSED    
+LongInteger TEST SET 02: both equals methods                                    PASSED    
+LongInteger TEST SET 03: parseLong() with valid positive values                 PASSED    

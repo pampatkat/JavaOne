@@ -1,7 +1,9 @@
 import java.io.*;
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.File; 
 /**
-* @author YOUR NAME here
+* @author Patcharee Catherina Jirakittiyakhon
 */
 
 public class A04Methods {
@@ -15,16 +17,84 @@ public class A04Methods {
         testFileAnalysis();
     }
 
-
+    /**
+     * Generates a numeric pattern based on the given size and direction.
+     *
+     * @param size      The size of the pattern; must be greater than 0.
+     * @param direction If true, the pattern counts up and then down; 
+     *                  if false, it counts down and then up.
+     * @return A string representing the generated numeric pattern.
+     * @throws IllegalArgumentException if the size is less than or equal to 0.
+     */
     public static String numericPattern(int size, boolean direction) throws IllegalArgumentException
     {
-      return "";
+        if(size <= 0){
+            throw new IllegalArgumentException("Size must be greater than 0");
+        }
+        String result = "";
+        if(direction == true){
+	        for(int i = 1; i < size; i++){
+                result += i;
+	        }
+	        for(int i = size; i > 0; i--){
+                result += i;
+	        }
+	    }else if(direction == false){
+	        for(int i = size; i > 1; i--){
+                result += i;
+	        }
+	        for(int i = 1; i <= size ; i++){
+                result += i;
+	        }
+	    }
+	    return result;
     }
 
-    
+    /**
+     * Analyzes a numeric data file and writes the analysis results to an output file.
+     *
+     * @param inputFileName  The name of the input file containing numeric data.
+     * @param outputFileName The name of the output file where the analysis results will be written.
+     * @throws IOException If an I/O error occurs while accessing the files.
+     */
     public static void fileAnalysis(String inputFileName, String outputFileName) throws IOException
     {
+        File inputFile = new File(inputFileName);
+        File outputFile = new File(outputFileName);
     
+        try (Scanner scanner = new Scanner(inputFile); PrintWriter writer = new PrintWriter(outputFile)) {
+            if (!scanner.hasNextInt()) {
+                writer.println("Numeric data file \"" + inputFileName + "\" is empty");
+                return;
+            }
+            int count = 1;
+            int firstNum = scanner.nextInt();
+            int largest = firstNum;
+            int smallest = firstNum;
+            int sum = firstNum;
+            
+            
+            Scanner myReader = new Scanner(inputFile);
+            while(scanner.hasNextInt()){
+                int num = scanner.nextInt();
+                
+                if(num > largest) largest = num;
+                if(num < smallest) smallest = num;
+                
+                sum += num;
+                count++;
+            }
+
+            if (count == 1) {
+                writer.println("Numeric data file \"" + inputFileName + "\" has only one number: " + firstNum);
+            } else {
+                writer.println("Numeric Data File \"" + inputFileName + "\" Analysis");
+                writer.println("Number of integers: " + count);
+                writer.println("The sum of all integers in file: " + sum);
+                writer.println("The largest integer in the set: " + largest);
+                writer.println("The smallest integer in the set: " + smallest);
+            }
+        }
     }
  
   

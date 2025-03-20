@@ -1,16 +1,23 @@
 
 ----numericPattern() Tests-------------------------------------------------------
 
-numericPattern() TEST 01 - pattern of size 1                                    FAILED    
-numericPattern() TEST 02 - pattern of given positive size                       FAILED    
-numericPattern() TEST 03 - IllegalArgumentException - size 0                    FAILED    
-numericPattern() TEST 03 - IllegalArgumentException - negative size             FAILED    
+numericPattern() TEST 01 - pattern of size 1                                    PASSED    
+numericPattern() TEST 02 - pattern of given positive size                       PASSED    
+numericPattern() TEST 03 - IllegalArgumentException - size 0                    PASSED    
+numericPattern() TEST 03 - IllegalArgumentException - negative size             PASSED    
 
 ++++ 4 Tests of numericPattern() method COMPLETE +++++++++++++++++++++++++++
 
 ----fileAnalysis() Tests-------------------------------------------------------
 
-FAIL: Unexpected IOException. fileAnalysis() may not be implemented yet
+fileAnalysis() TEST 01 - empty input file                                       PASSED    
+fileAnalysis() TEST 02 - one number in input file                               PASSED    
+fileAnalysis() TEST 03 - two zeros in input file                                PASSED    
+fileAnalysis() TEST 04 - simple set of values                                   PASSED    
+fileAnalysis() TEST 05 - MAX_VALUEs in file                                     PASSED    
+fileAnalysis() TEST 06 - MIN_VALUE & MAX_VALUE in file                          PASSED    
+fileAnalysis() TEST 07 - IOException                                            PASSED    
+
 ++++ 7 Tests of fileAnalysis() method COMPLETE +++++++++++++++++++++++++++
 
 ----Tests for ValidateInt-------------------------------------------------------------
@@ -87,34 +94,3 @@ Input:
 
 Expected output must fit RegEx:
 "(?si).*?Numeric Pattern Display.*?123454321.*?Numeric Pattern Display.*?4321234.*?Numeric Pattern Display.*"
-
-Actual Output:
-"Please enter the first number => Please enter the second number => Thank you! first number is 1, second number is 5."
-
-NumericPatternMenu TEST 01 - perfect input                                      FAILED    
-
-_____Test 02____________________________________________________________________________
-
-Input:
-abc
-6
-1
-oops
--7
-5
-2
-3.4
--1
-7
-3
-
-Expected output must fit RegEx:
-"(?si).*?Numeric Pattern Display.*?ERROR.*?Numeric Pattern Display.*?ERROR.*?Numeric Pattern Display.*?size.*?ERROR.*?size.*?ERROR.*?size.*?123454321.*?Numeric Pattern Display.*?size.*?ERROR.*?size.*?ERROR.*?size.*?7654321234567.*?Numeric Pattern Display.*"
-
-Actual Output:
-"Please enter the first number => ERROR. Number entered is not an integer.
-Please enter the first number => Please enter the second number => Thank you! first number is 6, second number is 1."
-
-NumericPatternMenu TEST 02 - incorrect user input                               FAILED    
-
-++++ 3 Tests of NumericPatternMenu COMPLETE +++++++++++++++++++++++++++
